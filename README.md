@@ -5,6 +5,7 @@ pull zoom CoordinatorLayout
 
 此工程参考了PullToZoom项目
 调用这个方法可以开启pull zoom 功能， 需要自己实现IPullZoom 里面的isReadyForPullStart方法。
+
 /**
      * 不设置这些信息就没有zoom相关的效果
      *
@@ -13,6 +14,7 @@ pull zoom CoordinatorLayout
      * @param maxZoomViewHeight 0为无穷大
      * @param pullZoom
      */
+     
     public void setPullZoom(View zoomView, int zoomViewHeight, int maxZoomViewHeight, IPullZoom pullZoom) {
         this.mZoomView = zoomView;
         mZoomViewHeight = zoomViewHeight;
