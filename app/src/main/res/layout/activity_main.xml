@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dfsx.bowen.zoomheadercoordinator.view.ZoomHeaderCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/scroll_snap_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_scrollFlags="scroll|snap">
+
+            <ImageView
+                android:id="@+id/zoom_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/bg_test"
+                />
+        </RelativeLayout>
+
+        <com.dfsx.bowen.zoomheadercoordinator.view.SimpleViewPagerIndicator
+            android:id="@+id/id_stickynavlayout_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffffff">
+        </com.dfsx.bowen.zoomheadercoordinator.view.SimpleViewPagerIndicator>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+</com.dfsx.bowen.zoomheadercoordinator.view.ZoomHeaderCoordinatorLayout>
